@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pepforge"
+version = "1.0.0"
+description = "Target-Conditioned De Novo Antimicrobial Peptide Design Engine"
+readme = "README.md"
+authors = [{ name = "PepForge-AI Team" }]
+dependencies = [
+    "torch>=2.0.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["pepforge*"]
