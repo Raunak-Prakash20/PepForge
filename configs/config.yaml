@@ -1,0 +1,22 @@
+# Master Project Configuration for PepForge-AI
+
+project:
+  name: "PepForge-AI"
+  version: "1.0.0"
+  target_domains:
+    - "Pseudomonas aeruginosa"
+    - "Acinetobacter baumannii"
+    - "Staphylococcus aureus (MRSA)"
+
+generation:
+  batch_size: 1000
+  default_length: 18
+  top_p: 0.90
+  temperature: 0.85
+  repetition_penalty: 1.2
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  reference_data_dir: "data/reference"
+  results_dir: "results"
