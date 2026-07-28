@@ -1,0 +1,35 @@
+# Configuration for 5-Stage In Silico Screening Funnel
+
+stage_1_bro5:
+  min_length: 10
+  max_length: 40
+  net_charge:
+    min: 2.0
+    max: 6.5
+    ph: 7.4
+  hydrophobic_ratio:
+    min: 35.0  # Percentage
+    max: 55.0  # Percentage
+  boman_index:
+    max: 2.50  # kcal/mol (lower means less non-specific protein binding)
+  hydrophobic_moment:
+    min: 0.35  # Eisenberg scale, alpha-helical periodicity 100 deg
+  gravy:
+    min: -0.5
+    max: 0.8
+
+stage_2_admet_toxicity:
+  min_hc50_ug_ml: 150.0  # Minimum predicted hemolytic concentration 50%
+  min_selectivity_index: 20.0  # HC50 / MIC ratio
+
+stage_3_admet_metabolism:
+  max_cleavage_site_index: 12.0  # Max vulnerable sites per 100 amino acids
+  flag_terminal_modifications: true  # Suggest N-acetylation and C-amidation
+
+stage_4_structure:
+  min_plddt: 70.0
+  min_helical_content_pct: 45.0
+
+stage_5_novelty:
+  max_sequence_identity_pct: 75.0
+  min_levenshtein_distance: 4
