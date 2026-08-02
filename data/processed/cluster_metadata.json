@@ -1,0 +1,9 @@
+{
+  "total_clusters": 30,
+  "train_clusters": 24,
+  "val_clusters": 3,
+  "test_clusters": 3,
+  "train_sequences": 28,
+  "val_sequences": 5,
+  "test_sequences": 3
+}
