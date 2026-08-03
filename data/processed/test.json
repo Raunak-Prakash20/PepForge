@@ -1,0 +1,35 @@
+[
+  {
+    "sequence": "LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES",
+    "length": 37,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 6.0,
+    "hc50_ug_ml": 220.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  },
+  {
+    "sequence": "KWKSFLKTFKSAKKTVLHTALKAISS",
+    "length": 26,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 2.5,
+    "hc50_ug_ml": 280.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  },
+  {
+    "sequence": "KLLKLLLKLLKLLK",
+    "length": 14,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 4.0,
+    "hc50_ug_ml": 160.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  }
+]

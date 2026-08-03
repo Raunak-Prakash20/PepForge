@@ -1,0 +1,57 @@
+[
+  {
+    "sequence": "GIGKFLHSAKKFGKAFVGEIMNS",
+    "length": 23,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 4.0,
+    "hc50_ug_ml": 300.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  },
+  {
+    "sequence": "GIGKFLHSAKKFGKAFVGEIMN",
+    "length": 22,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 8.0,
+    "hc50_ug_ml": 320.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  },
+  {
+    "sequence": "KFLHSAKKFVKAFVGEIMNS",
+    "length": 20,
+    "target_organism": "Pseudomonas aeruginosa",
+    "gram_type": "negative",
+    "mic_ug_ml": 8.0,
+    "hc50_ug_ml": 400.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  },
+  {
+    "sequence": "MSIQHFRVALIPFFAAFCLP",
+    "length": 20,
+    "target_organism": "None",
+    "gram_type": "unknown",
+    "mic_ug_ml": null,
+    "hc50_ug_ml": null,
+    "source": "Curated Seed",
+    "is_amp": false,
+    "metadata": {}
+  },
+  {
+    "sequence": "GLFKKLKKALKAL",
+    "length": 13,
+    "target_organism": "Staphylococcus aureus",
+    "gram_type": "positive",
+    "mic_ug_ml": 3.0,
+    "hc50_ug_ml": 290.0,
+    "source": "Curated Seed",
+    "is_amp": true,
+    "metadata": {}
+  }
+]
