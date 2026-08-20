@@ -124,7 +124,63 @@ sequenceDiagram
 
 ---
 
-### 3. Key Architectural Decisions
+### 3. The 5-Stage In Silico Screening Funnel (Biophysical Gatekeepers)
+
+Natural and synthetic therapeutic peptides inherently operate in **Beyond Rule of Five (bRo5)** space. PepForge evaluates every candidate through five strict, quantitative biophysical criteria:
+
+```
+[ Candidate Peptides (De Novo / Library) ]
+                   │
+                   ▼
+┌────────────────────────────────────────────────────────┐
+│ Stage 1: Beyond-Rule-of-5 (bRo5) Biophysical Filter    │
+│ • Net charge (+2.0 <= Q <= +6.5 via Henderson-Hasselbalch)│
+│ • Hydrophobic ratio (35% <= H_ratio <= 55%)           │
+│ • Boman index (< 2.50 kcal/mol)                       │
+│ • Eisenberg hydrophobic moment (uH >= 0.350)          │
+│ • GRAVY hydropathy (-1.0 <= GRAVY <= +0.5)            │
+└──────────────────────────┬─────────────────────────────┘
+                           │ Passed
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│ Stage 2: ADMET Toxicity & Hemolysis Model              │
+│ • Hydrophobic patch sliding window (max GRAVY <= 1.0)  │
+│ • Empirical HC50 prediction (HC50 >= 150.0 ug/mL)      │
+│ • Selectivity Index SI = HC50 / MIC (target SI >= 20.0)│
+│ • Aromatic ring fraction cutoff (<= 25.0%)             │
+└──────────────────────────┬─────────────────────────────┘
+                           │ Passed
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│ Stage 3: ADMET Metabolism & Proteolytic Stability      │
+│ • Cleavage site mapping: Trypsin, Chymotrypsin, Pepsin │
+│ • Cleavage Site Index CSI <= 18.0 sites/100 residues   │
+│ • Trypsin recognition site constraint (<= 3 sites)     │
+│ • Terminus capping analysis (N-Ac / C-amidation)       │
+└──────────────────────────┬─────────────────────────────┘
+                           │ Passed
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│ Stage 4: 3D Structural Folding & Amphipathicity        │
+│ • ESMFold predicted pLDDT confidence (mean >= 70.0)    │
+│ • Chou-Fasman secondary structure (helical >= 45.0%)   │
+│ • Helical wheel 2D polar projection & segregation      │
+└──────────────────────────┬─────────────────────────────┘
+                           │ Passed
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│ Stage 5: Freedom-to-Operate (FTO) & Novelty Filter     │
+│ • Sequence identity vs DBAASP/APD3 reference (<= 75%)  │
+│ • Levenshtein edit distance constraint (min dist >= 4) │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+                           ▼
+                 [ Validated Lead Leads ]
+```
+
+---
+
+### 4. Key Architectural Decisions
 
 | Architectural Decision | Chosen Strategy | Technical Rationale |
 |:---|:---|:---|
