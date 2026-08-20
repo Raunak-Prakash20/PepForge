@@ -1,6 +1,133 @@
 [
   {
-    "sequence": "LGVRLILFIKFKIILGVSVIQI",
+    "sequence": "KIRGGPFLLKKAAKKW",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic moment 0.294 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 62.5 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (63.5) is below structural confidence cutoff (70.0)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.991,
+      "hydrophobic_ratio_pct": 43.75,
+      "boman_index_kcal_mol": 0.177,
+      "hydrophobic_moment": 0.294,
+      "gravy": -0.55,
+      "isoelectric_point": 11.9,
+      "molecular_weight": 1840.16,
+      "length": 16
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 536.7,
+      "selectivity_index": 134.2,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 12.5,
+      "hemo_propensity_score": 0.093,
+      "max_hydrophobic_patch_gravy": 0.467
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 62.5,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 63.5,
+      "helical_content_pct": 56.2,
+      "beta_sheet_content_pct": 12.5,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.428
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 56.2,
+      "min_levenshtein_distance": 13,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KKALLKKRLWKK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.198 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 83.3 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.15)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.99,
+      "hydrophobic_ratio_pct": 41.67,
+      "boman_index_kcal_mol": 0.258,
+      "hydrophobic_moment": 0.198,
+      "gravy": -1.3,
+      "isoelectric_point": 11.95,
+      "molecular_weight": 1539.05,
+      "length": 12
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 650.0,
+      "selectivity_index": 162.5,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 8.33,
+      "hemo_propensity_score": 0.015,
+      "max_hydrophobic_patch_gravy": -0.433
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 83.33,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 82.2,
+      "helical_content_pct": 100.0,
+      "beta_sheet_content_pct": 0.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.149
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 19,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LKLLLLLFGLLKLKAIRKIG",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -12,53 +139,53 @@
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 68.2% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.096 below minimum amphipathicity 0.350",
+      "[Stage 1] Hydrophobic ratio 65.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.152 below minimum amphipathicity 0.350",
       "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
       "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 27.3 exceeds threshold 18.0",
-      "[Stage 4] Predicted pLDDT (52.4) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Helical content (0.0%) is below minimum threshold (45.0%)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.03)"
+      "[Stage 3] Cleavage Site Index 60.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (67.0) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.17)"
     ],
     "bro5_metrics": {
-      "net_charge_ph74": 2.993,
-      "hydrophobic_ratio_pct": 68.18,
-      "boman_index_kcal_mol": -0.194,
-      "hydrophobic_moment": 0.096,
-      "gravy": 1.955,
-      "isoelectric_point": 11.69,
-      "molecular_weight": 2481.62,
-      "length": 22
+      "net_charge_ph74": 4.992,
+      "hydrophobic_ratio_pct": 65.0,
+      "boman_index_kcal_mol": -0.147,
+      "hydrophobic_moment": 0.152,
+      "gravy": 1.345,
+      "isoelectric_point": 11.85,
+      "molecular_weight": 2262.57,
+      "length": 20
     },
     "admet_toxicity_metrics": {
       "predicted_hc50_ug_ml": 25.0,
       "selectivity_index": 6.2,
       "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 9.09,
+      "aromatic_content_pct": 5.0,
       "hemo_propensity_score": 1.0,
-      "max_hydrophobic_patch_gravy": 2.5
+      "max_hydrophobic_patch_gravy": 3.222
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 27.27,
-      "total_cleavage_sites": 6,
-      "trypsin_sites": 3,
-      "chymotrypsin_sites": 2,
+      "cleavage_site_index": 60.0,
+      "total_cleavage_sites": 12,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 1,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 52.4,
-      "helical_content_pct": 0.0,
-      "beta_sheet_content_pct": 100.0,
+      "predicted_plddt": 67.0,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 40.0,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.026
+      "segregation_score": 0.168
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
-      "max_sequence_identity_pct": 45.5,
-      "min_levenshtein_distance": 26,
-      "nearest_homolog_name": "LL-37",
-      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+      "max_sequence_identity_pct": 45.0,
+      "min_levenshtein_distance": 18,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
     },
     "synthesis_recommendations": [
       "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
@@ -67,69 +194,340 @@
     ]
   },
   {
-    "sequence": "EEIEEEEAEEELANRVRAGQ",
+    "sequence": "WGKWVGAKLLLRVG",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
       "stage_1_bro5": false,
-      "stage_2_admet_toxicity": true,
-      "stage_3_admet_metabolism": true,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
       "stage_4_structure": false,
       "stage_5_novelty": true
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Net charge -7.00 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic ratio 30.0% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.057 below minimum amphipathicity 0.350",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.03)"
+      "[Stage 1] Hydrophobic ratio 57.1% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.128 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (36.5 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=9.1 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (59.1) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (28.6%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.00)"
     ],
     "bro5_metrics": {
-      "net_charge_ph74": -6.999,
-      "hydrophobic_ratio_pct": 30.0,
-      "boman_index_kcal_mol": 0.37,
-      "hydrophobic_moment": 0.057,
-      "gravy": -1.5,
-      "isoelectric_point": 3.72,
-      "molecular_weight": 2329.07,
-      "length": 20
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 57.14,
+      "boman_index_kcal_mol": 0.067,
+      "hydrophobic_moment": 0.128,
+      "gravy": 0.45,
+      "isoelectric_point": 11.69,
+      "molecular_weight": 1581.96,
+      "length": 14
     },
     "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 650.0,
-      "selectivity_index": 162.5,
-      "hemolysis_risk": "Low",
-      "aromatic_content_pct": 0.0,
-      "hemo_propensity_score": 0.005,
-      "max_hydrophobic_patch_gravy": -0.533
+      "predicted_hc50_ug_ml": 36.5,
+      "selectivity_index": 9.1,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 14.29,
+      "hemo_propensity_score": 0.88,
+      "max_hydrophobic_patch_gravy": 1.422
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 10.0,
-      "total_cleavage_sites": 2,
-      "trypsin_sites": 2,
-      "chymotrypsin_sites": 0,
-      "estimated_stability": "High"
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 71.7,
-      "helical_content_pct": 65.0,
-      "beta_sheet_content_pct": 20.0,
+      "predicted_plddt": 59.1,
+      "helical_content_pct": 28.6,
+      "beta_sheet_content_pct": 64.3,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.029
+      "segregation_score": 0.0
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
-      "max_sequence_identity_pct": 35.0,
-      "min_levenshtein_distance": 22,
+      "max_sequence_identity_pct": 57.1,
+      "min_levenshtein_distance": 21,
       "nearest_homolog_name": "Melittin",
       "nearest_homolog_organism": "Broad Spectrum"
     },
     "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'E' from aminopeptidases.",
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'W' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LFKLKAVKIAVRF",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 69.2% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.200 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 53.9 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.22)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 3.993,
+      "hydrophobic_ratio_pct": 69.23,
+      "boman_index_kcal_mol": 0.017,
+      "hydrophobic_moment": 0.2,
+      "gravy": 1.038,
+      "isoelectric_point": 11.78,
+      "molecular_weight": 1532.0,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 15.38,
+      "hemo_propensity_score": 0.9,
+      "max_hydrophobic_patch_gravy": 1.022
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 53.85,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 4,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 71.7,
+      "helical_content_pct": 53.8,
+      "beta_sheet_content_pct": 46.2,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.218
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 61.5,
+      "min_levenshtein_distance": 30,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KVGILALFKKLAWKRRLG",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 55.6% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.098 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (43.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=10.8 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (64.7) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.01)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.992,
+      "hydrophobic_ratio_pct": 55.56,
+      "boman_index_kcal_mol": 0.116,
+      "hydrophobic_moment": 0.098,
+      "gravy": 0.222,
+      "isoelectric_point": 12.51,
+      "molecular_weight": 2096.35,
+      "length": 18
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 43.0,
+      "selectivity_index": 10.8,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 11.11,
+      "hemo_propensity_score": 0.822,
+      "max_hydrophobic_patch_gravy": 1.611
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 9,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 64.7,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 33.3,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.013
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 55.6,
+      "min_levenshtein_distance": 17,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LVGVLGKLKALGARAIAARL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 65.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.114 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 20.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (65.0) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.10)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 3.993,
+      "hydrophobic_ratio_pct": 65.0,
+      "boman_index_kcal_mol": 0.033,
+      "hydrophobic_moment": 0.114,
+      "gravy": 1.145,
+      "isoelectric_point": 12.5,
+      "molecular_weight": 1989.3,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.963,
+      "max_hydrophobic_patch_gravy": 1.378
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 20.0,
+      "total_cleavage_sites": 4,
+      "trypsin_sites": 4,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 65.0,
+      "helical_content_pct": 70.0,
+      "beta_sheet_content_pct": 25.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.098
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 55.0,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
       "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases."
     ]
   },
   {
-    "sequence": "KKKFKKGGIKKKKLV",
+    "sequence": "KLLVFKFWLKIPAQLKKKA",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 57.9% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.167 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (51.1 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=12.8 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 63.2 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (65.4) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.22)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 57.89,
+      "boman_index_kcal_mol": 0.037,
+      "hydrophobic_moment": 0.167,
+      "gravy": 0.195,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 2298.48,
+      "length": 19
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 51.1,
+      "selectivity_index": 12.8,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 15.79,
+      "hemo_propensity_score": 0.764,
+      "max_hydrophobic_patch_gravy": 1.467
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 63.16,
+      "total_cleavage_sites": 12,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 65.4,
+      "helical_content_pct": 52.6,
+      "beta_sheet_content_pct": 42.1,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.216
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 55.6,
+      "min_levenshtein_distance": 12,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LVRKLKKLKPRK",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -141,50 +539,185 @@
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Net charge +8.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic ratio 26.7% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.216 below minimum amphipathicity 0.350",
-      "[Stage 3] Cleavage Site Index 66.7 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (9) exceed allowed limit (3)",
-      "[Stage 4] Predicted pLDDT (66.3) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.26)"
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic ratio 33.3% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.304 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (64.5) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (41.7%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.34)"
     ],
     "bro5_metrics": {
-      "net_charge_ph74": 8.988,
-      "hydrophobic_ratio_pct": 26.67,
-      "boman_index_kcal_mol": 0.157,
-      "hydrophobic_moment": 0.216,
-      "gravy": -1.373,
-      "isoelectric_point": 11.44,
-      "molecular_weight": 1757.22,
-      "length": 15
+      "net_charge_ph74": 6.991,
+      "hydrophobic_ratio_pct": 33.33,
+      "boman_index_kcal_mol": 0.329,
+      "hydrophobic_moment": 0.304,
+      "gravy": -1.208,
+      "isoelectric_point": 12.53,
+      "molecular_weight": 1506.07,
+      "length": 12
     },
     "admet_toxicity_metrics": {
       "predicted_hc50_ug_ml": 650.0,
       "selectivity_index": 162.5,
       "hemolysis_risk": "Low",
-      "aromatic_content_pct": 6.67,
-      "hemo_propensity_score": 0.008,
-      "max_hydrophobic_patch_gravy": -0.433
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.014,
+      "max_hydrophobic_patch_gravy": -0.5
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 66.67,
-      "total_cleavage_sites": 10,
-      "trypsin_sites": 9,
-      "chymotrypsin_sites": 1,
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 0,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 66.3,
-      "helical_content_pct": 53.3,
-      "beta_sheet_content_pct": 6.7,
+      "predicted_plddt": 64.5,
+      "helical_content_pct": 41.7,
+      "beta_sheet_content_pct": 25.0,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.264
+      "segregation_score": 0.336
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
-      "max_sequence_identity_pct": 66.7,
-      "min_levenshtein_distance": 27,
+      "max_sequence_identity_pct": 58.3,
+      "min_levenshtein_distance": 13,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LKKLFFKLKGLLPKIALPIL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 60.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.251 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (58.3) is below structural confidence cutoff (70.0)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.991,
+      "hydrophobic_ratio_pct": 60.0,
+      "boman_index_kcal_mol": -0.119,
+      "hydrophobic_moment": 0.251,
+      "gravy": 0.995,
+      "isoelectric_point": 11.15,
+      "molecular_weight": 2292.55,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 10.0,
+      "hemo_propensity_score": 0.976,
+      "max_hydrophobic_patch_gravy": 1.678
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 58.3,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 35.0,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.386
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 14,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KIFILGFFKAKR",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 58.3% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.277 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 66.7 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (66.1) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (41.7%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.25)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 3.993,
+      "hydrophobic_ratio_pct": 58.33,
+      "boman_index_kcal_mol": 0.03,
+      "hydrophobic_moment": 0.277,
+      "gravy": 0.533,
+      "isoelectric_point": 11.78,
+      "molecular_weight": 1466.92,
+      "length": 12
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 25.0,
+      "hemo_propensity_score": 0.974,
+      "max_hydrophobic_patch_gravy": 2.078
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 66.67,
+      "total_cleavage_sites": 8,
+      "trypsin_sites": 4,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 66.1,
+      "helical_content_pct": 41.7,
+      "beta_sheet_content_pct": 58.3,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.246
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 58.3,
+      "min_levenshtein_distance": 31,
       "nearest_homolog_name": "Cecropin A",
       "nearest_homolog_organism": "Acinetobacter baumannii"
     },
@@ -195,72 +728,7 @@
     ]
   },
   {
-    "sequence": "AGKALKKVKKVILLAK",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": false,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": true,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 56.2% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.290 below minimum amphipathicity 0.350",
-      "[Stage 2] Predicted HC50 (72.2 ug/mL) is below safe cutoff (150.0 ug/mL)",
-      "[Stage 2] Selectivity Index SI=18.1 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 43.8 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 5.99,
-      "hydrophobic_ratio_pct": 56.25,
-      "boman_index_kcal_mol": 0.014,
-      "hydrophobic_moment": 0.29,
-      "gravy": 0.369,
-      "isoelectric_point": 11.24,
-      "molecular_weight": 1707.19,
-      "length": 16
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 72.2,
-      "selectivity_index": 18.1,
-      "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 0.0,
-      "hemo_propensity_score": 0.655,
-      "max_hydrophobic_patch_gravy": 1.178
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 43.75,
-      "total_cleavage_sites": 7,
-      "trypsin_sites": 6,
-      "chymotrypsin_sites": 0,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 77.5,
-      "helical_content_pct": 62.5,
-      "beta_sheet_content_pct": 31.2,
-      "is_amphipathic_helix": true,
-      "segregation_score": 0.457
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 56.2,
-      "min_levenshtein_distance": 11,
-      "nearest_homolog_name": "Syn-P18",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "KKALLKKFVLLLKKLR",
+    "sequence": "LKLLKFLKFLIWVG",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -272,112 +740,45 @@
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic ratio 56.2% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.255 below minimum amphipathicity 0.350",
+      "[Stage 1] Hydrophobic ratio 71.4% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.216 below minimum amphipathicity 0.350",
       "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
       "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 68.8 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.25)"
+      "[Stage 3] Cleavage Site Index 64.3 exceeds threshold 18.0",
+      "[Stage 4] Helical content (42.9%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.33)"
     ],
     "bro5_metrics": {
-      "net_charge_ph74": 6.99,
-      "hydrophobic_ratio_pct": 56.25,
-      "boman_index_kcal_mol": 0.032,
-      "hydrophobic_moment": 0.255,
-      "gravy": 0.231,
-      "isoelectric_point": 11.95,
-      "molecular_weight": 1938.36,
-      "length": 16
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 25.0,
-      "selectivity_index": 6.2,
-      "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 6.25,
-      "hemo_propensity_score": 0.933,
-      "max_hydrophobic_patch_gravy": 2.022
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 68.75,
-      "total_cleavage_sites": 11,
-      "trypsin_sites": 7,
-      "chymotrypsin_sites": 1,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 76.0,
-      "helical_content_pct": 68.8,
-      "beta_sheet_content_pct": 31.2,
-      "is_amphipathic_helix": false,
-      "segregation_score": 0.254
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 56.2,
-      "min_levenshtein_distance": 29,
-      "nearest_homolog_name": "LL-37",
-      "nearest_homolog_organism": "Pseudomonas aeruginosa"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "LLLLLAKLLKFKKK",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": false,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": false,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 64.3% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.226 below minimum amphipathicity 0.350",
-      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
-      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 78.6 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.26)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 4.991,
-      "hydrophobic_ratio_pct": 64.29,
-      "boman_index_kcal_mol": -0.126,
-      "hydrophobic_moment": 0.226,
-      "gravy": 0.836,
-      "isoelectric_point": 11.15,
-      "molecular_weight": 1668.18,
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 71.43,
+      "boman_index_kcal_mol": -0.187,
+      "hydrophobic_moment": 0.216,
+      "gravy": 1.45,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 1717.11,
       "length": 14
     },
     "admet_toxicity_metrics": {
       "predicted_hc50_ug_ml": 25.0,
       "selectivity_index": 6.2,
       "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 7.14,
+      "aromatic_content_pct": 21.43,
       "hemo_propensity_score": 0.998,
-      "max_hydrophobic_patch_gravy": 2.722
+      "max_hydrophobic_patch_gravy": 1.944
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 78.57,
-      "total_cleavage_sites": 11,
-      "trypsin_sites": 5,
-      "chymotrypsin_sites": 1,
+      "cleavage_site_index": 64.29,
+      "total_cleavage_sites": 9,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 3,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 78.6,
-      "helical_content_pct": 78.6,
-      "beta_sheet_content_pct": 21.4,
+      "predicted_plddt": 70.6,
+      "helical_content_pct": 42.9,
+      "beta_sheet_content_pct": 57.1,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.264
+      "segregation_score": 0.325
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
@@ -393,7 +794,7 @@
     ]
   },
   {
-    "sequence": "KAGLVFAVKILLFAPG",
+    "sequence": "FFLKKLKLWLLKLAVGVILA",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -405,386 +806,63 @@
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Net charge +1.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic ratio 68.8% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.106 below minimum amphipathicity 0.350",
+      "[Stage 1] Hydrophobic ratio 75.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.125 below minimum amphipathicity 0.350",
       "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
       "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 37.5 exceeds threshold 18.0",
-      "[Stage 4] Predicted pLDDT (62.4) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Helical content (18.8%) is below minimum threshold (45.0%)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 1.993,
-      "hydrophobic_ratio_pct": 68.75,
-      "boman_index_kcal_mol": -0.113,
-      "hydrophobic_moment": 0.106,
-      "gravy": 1.569,
-      "isoelectric_point": 10.62,
-      "molecular_weight": 1643.02,
-      "length": 16
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 25.0,
-      "selectivity_index": 6.2,
-      "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 12.5,
-      "hemo_propensity_score": 1.0,
-      "max_hydrophobic_patch_gravy": 2.778
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 37.5,
-      "total_cleavage_sites": 6,
-      "trypsin_sites": 2,
-      "chymotrypsin_sites": 2,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 62.4,
-      "helical_content_pct": 18.8,
-      "beta_sheet_content_pct": 56.2,
-      "is_amphipathic_helix": true,
-      "segregation_score": 0.381
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 50.0,
-      "min_levenshtein_distance": 13,
-      "nearest_homolog_name": "Syn-P18",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "WIIKGLKKLKKKLAFIQR",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": true,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": true,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 6.99,
-      "hydrophobic_ratio_pct": 50.0,
-      "boman_index_kcal_mol": 0.095,
-      "hydrophobic_moment": 0.36,
-      "gravy": -0.178,
-      "isoelectric_point": 11.95,
-      "molecular_weight": 2210.46,
-      "length": 18
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 307.9,
-      "selectivity_index": 77.0,
-      "hemolysis_risk": "Low",
-      "aromatic_content_pct": 11.11,
-      "hemo_propensity_score": 0.243,
-      "max_hydrophobic_patch_gravy": 0.4
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 50.0,
-      "total_cleavage_sites": 9,
-      "trypsin_sites": 7,
-      "chymotrypsin_sites": 2,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 70.9,
-      "helical_content_pct": 50.0,
-      "beta_sheet_content_pct": 44.4,
-      "is_amphipathic_helix": true,
-      "segregation_score": 0.425
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 50.0,
-      "min_levenshtein_distance": 14,
-      "nearest_homolog_name": "Syn-P18",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'W' from aminopeptidases.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "GLLKKRKKKLLKLLKKAKRKAA",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": true,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": true,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Net charge +11.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic moment 0.300 below minimum amphipathicity 0.350",
-      "[Stage 3] Cleavage Site Index 68.2 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (12) exceed allowed limit (3)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 11.987,
-      "hydrophobic_ratio_pct": 40.91,
-      "boman_index_kcal_mol": 0.218,
-      "hydrophobic_moment": 0.3,
-      "gravy": -0.918,
-      "isoelectric_point": 12.56,
-      "molecular_weight": 2559.8,
-      "length": 22
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 650.0,
-      "selectivity_index": 162.5,
-      "hemolysis_risk": "Low",
-      "aromatic_content_pct": 0.0,
-      "hemo_propensity_score": 0.029,
-      "max_hydrophobic_patch_gravy": 0.156
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 68.18,
-      "total_cleavage_sites": 15,
-      "trypsin_sites": 12,
-      "chymotrypsin_sites": 0,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 84.1,
-      "helical_content_pct": 90.9,
-      "beta_sheet_content_pct": 4.5,
-      "is_amphipathic_helix": true,
-      "segregation_score": 0.426
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 40.9,
-      "min_levenshtein_distance": 28,
-      "nearest_homolog_name": "LL-37",
-      "nearest_homolog_organism": "Pseudomonas aeruginosa"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "VGKWIFKGVKLWAFAGIRFAGK",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": false,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": false,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 59.1% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.274 below minimum amphipathicity 0.350",
-      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
-      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
-      "[Stage 4] Predicted pLDDT (62.3) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Helical content (27.3%) is below minimum threshold (45.0%)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 4.992,
-      "hydrophobic_ratio_pct": 59.09,
-      "boman_index_kcal_mol": 0.046,
-      "hydrophobic_moment": 0.274,
-      "gravy": 0.523,
-      "isoelectric_point": 11.85,
-      "molecular_weight": 2478.45,
-      "length": 22
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 25.0,
-      "selectivity_index": 6.2,
-      "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 22.73,
-      "hemo_propensity_score": 0.919,
-      "max_hydrophobic_patch_gravy": 1.522
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 50.0,
-      "total_cleavage_sites": 11,
-      "trypsin_sites": 5,
-      "chymotrypsin_sites": 5,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 62.3,
-      "helical_content_pct": 27.3,
-      "beta_sheet_content_pct": 63.6,
-      "is_amphipathic_helix": true,
-      "segregation_score": 0.43
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 44.4,
-      "min_levenshtein_distance": 16,
-      "nearest_homolog_name": "Syn-P18",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "KLAVKKKKKKKIRGKF",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": true,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": false,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Net charge +9.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic ratio 31.2% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.016 below minimum amphipathicity 0.350",
-      "[Stage 3] Cleavage Site Index 68.8 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (10) exceed allowed limit (3)",
-      "[Stage 4] Predicted pLDDT (69.7) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.04)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 9.988,
-      "hydrophobic_ratio_pct": 31.25,
-      "boman_index_kcal_mol": 0.253,
-      "hydrophobic_moment": 0.016,
-      "gravy": -1.431,
-      "isoelectric_point": 12.05,
-      "molecular_weight": 1927.33,
-      "length": 16
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 650.0,
-      "selectivity_index": 162.5,
-      "hemolysis_risk": "Low",
-      "aromatic_content_pct": 6.25,
-      "hemo_propensity_score": 0.006,
-      "max_hydrophobic_patch_gravy": -1.511
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 68.75,
-      "total_cleavage_sites": 11,
-      "trypsin_sites": 10,
-      "chymotrypsin_sites": 1,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 69.7,
-      "helical_content_pct": 68.8,
-      "beta_sheet_content_pct": 6.2,
-      "is_amphipathic_helix": false,
-      "segregation_score": 0.035
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 50.0,
-      "min_levenshtein_distance": 29,
-      "nearest_homolog_name": "Cecropin A",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "KVLGAKFAKVAKWLFLLI",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": false,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": false,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 72.2% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.236 below minimum amphipathicity 0.350",
-      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
-      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 61.1 exceeds threshold 18.0",
+      "[Stage 3] Cleavage Site Index 60.0 exceeds threshold 18.0",
       "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.33)"
+      "[Stage 4] Predicted pLDDT (66.1) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (40.0%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.27)"
     ],
     "bro5_metrics": {
       "net_charge_ph74": 3.992,
-      "hydrophobic_ratio_pct": 72.22,
-      "boman_index_kcal_mol": -0.088,
-      "hydrophobic_moment": 0.236,
-      "gravy": 1.233,
+      "hydrophobic_ratio_pct": 75.0,
+      "boman_index_kcal_mol": -0.168,
+      "hydrophobic_moment": 0.125,
+      "gravy": 1.59,
       "isoelectric_point": 11.03,
-      "molecular_weight": 2044.3,
-      "length": 18
+      "molecular_weight": 2312.52,
+      "length": 20
     },
     "admet_toxicity_metrics": {
       "predicted_hc50_ug_ml": 25.0,
       "selectivity_index": 6.2,
       "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 16.67,
-      "hemo_propensity_score": 0.998,
-      "max_hydrophobic_patch_gravy": 2.211
+      "aromatic_content_pct": 15.0,
+      "hemo_propensity_score": 1.0,
+      "max_hydrophobic_patch_gravy": 2.422
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 61.11,
-      "total_cleavage_sites": 11,
+      "cleavage_site_index": 60.0,
+      "total_cleavage_sites": 12,
       "trypsin_sites": 4,
       "chymotrypsin_sites": 3,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 70.8,
-      "helical_content_pct": 55.6,
-      "beta_sheet_content_pct": 44.4,
+      "predicted_plddt": 66.1,
+      "helical_content_pct": 40.0,
+      "beta_sheet_content_pct": 60.0,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.329
+      "segregation_score": 0.274
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
-      "max_sequence_identity_pct": 55.6,
-      "min_levenshtein_distance": 30,
-      "nearest_homolog_name": "LL-37",
-      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
     },
     "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
       "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
       "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
     ]
   },
   {
-    "sequence": "LKVKKIWKAKWLIL",
+    "sequence": "LKVLKKKLKARALGLL",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -796,117 +874,51 @@
     },
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
-      "[Stage 1] Hydrophobic ratio 64.3% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.145 below minimum amphipathicity 0.350",
-      "[Stage 2] Predicted HC50 (63.3 ug/mL) is below safe cutoff (150.0 ug/mL)",
-      "[Stage 2] Selectivity Index SI=15.8 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 57.1 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.15)"
+      "[Stage 1] Hydrophobic ratio 56.2% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.109 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (90.6 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 3] Cleavage Site Index 43.8 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.14)"
     ],
     "bro5_metrics": {
-      "net_charge_ph74": 4.991,
-      "hydrophobic_ratio_pct": 64.29,
-      "boman_index_kcal_mol": -0.011,
-      "hydrophobic_moment": 0.145,
-      "gravy": 0.364,
-      "isoelectric_point": 11.15,
-      "molecular_weight": 1766.17,
-      "length": 14
-    },
-    "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 63.3,
-      "selectivity_index": 15.8,
-      "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 14.29,
-      "hemo_propensity_score": 0.696,
-      "max_hydrophobic_patch_gravy": 0.978
-    },
-    "admet_metabolism_metrics": {
-      "cleavage_site_index": 57.14,
-      "total_cleavage_sites": 8,
-      "trypsin_sites": 5,
-      "chymotrypsin_sites": 2,
-      "estimated_stability": "Low (Rapid Clearance)"
-    },
-    "structure_metrics": {
-      "predicted_plddt": 73.4,
-      "helical_content_pct": 64.3,
-      "beta_sheet_content_pct": 35.7,
-      "is_amphipathic_helix": false,
-      "segregation_score": 0.155
-    },
-    "novelty_metrics": {
-      "is_patentable_novel": true,
-      "max_sequence_identity_pct": 64.3,
-      "min_levenshtein_distance": 28,
-      "nearest_homolog_name": "LL-37",
-      "nearest_homolog_organism": "Pseudomonas aeruginosa"
-    },
-    "synthesis_recommendations": [
-      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
-      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
-      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
-    ]
-  },
-  {
-    "sequence": "LKKAWLKGKVGAKAKK",
-    "target_organism": "Acinetobacter baumannii",
-    "overall_passed": false,
-    "stages_passed": {
-      "stage_1_bro5": false,
-      "stage_2_admet_toxicity": true,
-      "stage_3_admet_metabolism": false,
-      "stage_4_structure": false,
-      "stage_5_novelty": true
-    },
-    "rejection_stage": "stage_1_bro5",
-    "all_failure_reasons": [
-      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
-      "[Stage 1] Hydrophobic moment 0.136 below minimum amphipathicity 0.350",
-      "[Stage 3] Cleavage Site Index 56.2 exceeds threshold 18.0",
-      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
-      "[Stage 4] Predicted pLDDT (69.3) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.10)"
-    ],
-    "bro5_metrics": {
-      "net_charge_ph74": 6.99,
-      "hydrophobic_ratio_pct": 43.75,
-      "boman_index_kcal_mol": 0.152,
-      "hydrophobic_moment": 0.136,
-      "gravy": -0.737,
-      "isoelectric_point": 11.32,
-      "molecular_weight": 1753.15,
+      "net_charge_ph74": 5.991,
+      "hydrophobic_ratio_pct": 56.25,
+      "boman_index_kcal_mol": 0.031,
+      "hydrophobic_moment": 0.109,
+      "gravy": 0.387,
+      "isoelectric_point": 11.9,
+      "molecular_weight": 1791.26,
       "length": 16
     },
     "admet_toxicity_metrics": {
-      "predicted_hc50_ug_ml": 650.0,
-      "selectivity_index": 162.5,
-      "hemolysis_risk": "Low",
-      "aromatic_content_pct": 6.25,
-      "hemo_propensity_score": 0.054,
-      "max_hydrophobic_patch_gravy": 0.233
+      "predicted_hc50_ug_ml": 90.6,
+      "selectivity_index": 22.6,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.587,
+      "max_hydrophobic_patch_gravy": 1.111
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 56.25,
-      "total_cleavage_sites": 9,
-      "trypsin_sites": 7,
-      "chymotrypsin_sites": 1,
+      "cleavage_site_index": 43.75,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 0,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 69.3,
+      "predicted_plddt": 72.9,
       "helical_content_pct": 75.0,
-      "beta_sheet_content_pct": 0.0,
+      "beta_sheet_content_pct": 25.0,
       "is_amphipathic_helix": false,
-      "segregation_score": 0.105
+      "segregation_score": 0.143
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
-      "max_sequence_identity_pct": 50.0,
-      "min_levenshtein_distance": 28,
-      "nearest_homolog_name": "Cecropin A",
-      "nearest_homolog_organism": "Acinetobacter baumannii"
+      "max_sequence_identity_pct": 43.8,
+      "min_levenshtein_distance": 20,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
     },
     "synthesis_recommendations": [
       "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
@@ -915,7 +927,7 @@
     ]
   },
   {
-    "sequence": "KVALVFAKPLLRPQ",
+    "sequence": "GKLVALLKFKKVVQ",
     "target_organism": "Acinetobacter baumannii",
     "overall_passed": false,
     "stages_passed": {
@@ -928,44 +940,1344 @@
     "rejection_stage": "stage_1_bro5",
     "all_failure_reasons": [
       "[Stage 1] Hydrophobic ratio 57.1% outside window [35.0%, 55.0%]",
-      "[Stage 1] Hydrophobic moment 0.280 below minimum amphipathicity 0.350",
+      "[Stage 1] Hydrophobic moment 0.108 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (40.8 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=10.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 42.9 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (69.2) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.12)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 3.992,
+      "hydrophobic_ratio_pct": 57.14,
+      "boman_index_kcal_mol": -0.016,
+      "hydrophobic_moment": 0.108,
+      "gravy": 0.65,
+      "isoelectric_point": 11.03,
+      "molecular_weight": 1570.04,
+      "length": 14
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 40.8,
+      "selectivity_index": 10.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 7.14,
+      "hemo_propensity_score": 0.84,
+      "max_hydrophobic_patch_gravy": 1.333
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 42.86,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 4,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 69.2,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 42.9,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.116
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 57.1,
+      "min_levenshtein_distance": 16,
+      "nearest_homolog_name": "Magainin-2",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "ILFLKLAKLKFVPLF",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 73.3% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.070 below minimum amphipathicity 0.350",
       "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
       "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
-      "[Stage 3] Cleavage Site Index 21.4 exceeds threshold 18.0",
-      "[Stage 4] Predicted pLDDT (67.8) is below structural confidence cutoff (70.0)",
-      "[Stage 4] Helical content (42.9%) is below minimum threshold (45.0%)"
+      "[Stage 3] Cleavage Site Index 60.0 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (58.9) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (33.3%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.10)"
     ],
     "bro5_metrics": {
       "net_charge_ph74": 2.993,
-      "hydrophobic_ratio_pct": 57.14,
-      "boman_index_kcal_mol": 0.126,
-      "hydrophobic_moment": 0.28,
-      "gravy": 0.514,
-      "isoelectric_point": 11.69,
-      "molecular_weight": 1579.0,
-      "length": 14
+      "hydrophobic_ratio_pct": 73.33,
+      "boman_index_kcal_mol": -0.179,
+      "hydrophobic_moment": 0.07,
+      "gravy": 1.64,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 1789.17,
+      "length": 15
     },
     "admet_toxicity_metrics": {
       "predicted_hc50_ug_ml": 25.0,
       "selectivity_index": 6.2,
       "hemolysis_risk": "High (Toxic)",
-      "aromatic_content_pct": 7.14,
-      "hemo_propensity_score": 0.952,
-      "max_hydrophobic_patch_gravy": 1.878
+      "aromatic_content_pct": 20.0,
+      "hemo_propensity_score": 0.997,
+      "max_hydrophobic_patch_gravy": 1.833
     },
     "admet_metabolism_metrics": {
-      "cleavage_site_index": 21.43,
-      "total_cleavage_sites": 3,
-      "trypsin_sites": 1,
+      "cleavage_site_index": 60.0,
+      "total_cleavage_sites": 9,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 58.9,
+      "helical_content_pct": 33.3,
+      "beta_sheet_content_pct": 66.7,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.104
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 53.3,
+      "min_levenshtein_distance": 12,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KVKIRKKLFFKLGRV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.200 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 73.3 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (65.3) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (40.0%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.22)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.991,
+      "hydrophobic_ratio_pct": 46.67,
+      "boman_index_kcal_mol": 0.167,
+      "hydrophobic_moment": 0.2,
+      "gravy": -0.187,
+      "isoelectric_point": 12.53,
+      "molecular_weight": 1859.24,
+      "length": 15
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 407.6,
+      "selectivity_index": 101.9,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 13.33,
+      "hemo_propensity_score": 0.167,
+      "max_hydrophobic_patch_gravy": 0.522
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 73.33,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 65.3,
+      "helical_content_pct": 40.0,
+      "beta_sheet_content_pct": 53.3,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.219
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 60.0,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "FKKLAVRKAKALALIILI",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 72.2% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.184 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 33.3 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.24)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.992,
+      "hydrophobic_ratio_pct": 72.22,
+      "boman_index_kcal_mol": -0.043,
+      "hydrophobic_moment": 0.184,
+      "gravy": 1.267,
+      "isoelectric_point": 11.85,
+      "molecular_weight": 2008.37,
+      "length": 18
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 5.56,
+      "hemo_propensity_score": 1.0,
+      "max_hydrophobic_patch_gravy": 2.733
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 33.33,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 5,
       "chymotrypsin_sites": 1,
       "estimated_stability": "Low (Rapid Clearance)"
     },
     "structure_metrics": {
-      "predicted_plddt": 67.8,
-      "helical_content_pct": 42.9,
-      "beta_sheet_content_pct": 14.3,
+      "predicted_plddt": 76.7,
+      "helical_content_pct": 72.2,
+      "beta_sheet_content_pct": 27.8,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.245
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 44.4,
+      "min_levenshtein_distance": 19,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KKLFKKGLFLKFAV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 57.1% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.155 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (63.9 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=16.0 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 78.6 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (66.7) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.14)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.991,
+      "hydrophobic_ratio_pct": 57.14,
+      "boman_index_kcal_mol": -0.036,
+      "hydrophobic_moment": 0.155,
+      "gravy": 0.421,
+      "isoelectric_point": 11.15,
+      "molecular_weight": 1666.07,
+      "length": 14
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 63.9,
+      "selectivity_index": 16.0,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 21.43,
+      "hemo_propensity_score": 0.693,
+      "max_hydrophobic_patch_gravy": 1.222
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 78.57,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 66.7,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 28.6,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.145
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 71.4,
+      "min_levenshtein_distance": 9,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KKAKLAFLAKAARGA",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 60.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.159 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 46.7 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.13)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.992,
+      "hydrophobic_ratio_pct": 60.0,
+      "boman_index_kcal_mol": 0.177,
+      "hydrophobic_moment": 0.159,
+      "gravy": 0.047,
+      "isoelectric_point": 11.85,
+      "molecular_weight": 1542.98,
+      "length": 15
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 174.0,
+      "selectivity_index": 43.5,
+      "hemolysis_risk": "Moderate",
+      "aromatic_content_pct": 6.67,
+      "hemo_propensity_score": 0.4,
+      "max_hydrophobic_patch_gravy": 1.089
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 46.67,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 80.2,
+      "helical_content_pct": 93.3,
+      "beta_sheet_content_pct": 0.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.128
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.7,
+      "min_levenshtein_distance": 13,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLFLLLGILKKRARALK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 58.8% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.158 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 64.7 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (68.8) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.24)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.992,
+      "hydrophobic_ratio_pct": 58.82,
+      "boman_index_kcal_mol": 0.059,
+      "hydrophobic_moment": 0.158,
+      "gravy": 0.512,
+      "isoelectric_point": 12.51,
+      "molecular_weight": 1980.35,
+      "length": 17
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 5.88,
+      "hemo_propensity_score": 0.989,
+      "max_hydrophobic_patch_gravy": 2.444
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 64.71,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 68.8,
+      "helical_content_pct": 52.9,
+      "beta_sheet_content_pct": 41.2,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.236
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 52.9,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LKKLFGKKLLAKKKLGVII",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.130 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (109.3 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 3] Cleavage Site Index 52.6 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (64.7) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.17)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.99,
+      "hydrophobic_ratio_pct": 52.63,
+      "boman_index_kcal_mol": -0.066,
+      "hydrophobic_moment": 0.13,
+      "gravy": 0.458,
+      "isoelectric_point": 11.32,
+      "molecular_weight": 2137.49,
+      "length": 19
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 109.3,
+      "selectivity_index": 27.3,
+      "hemolysis_risk": "Moderate",
+      "aromatic_content_pct": 5.26,
+      "hemo_propensity_score": 0.532,
+      "max_hydrophobic_patch_gravy": 0.744
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 52.63,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 64.7,
+      "helical_content_pct": 52.6,
+      "beta_sheet_content_pct": 21.1,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.169
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 61.1,
+      "min_levenshtein_distance": 13,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "FLKFKKLKLKKLAVIKKKL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +8.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.173 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 63.2 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (9) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.20)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 8.988,
+      "hydrophobic_ratio_pct": 52.63,
+      "boman_index_kcal_mol": -0.003,
+      "hydrophobic_moment": 0.173,
+      "gravy": -0.0,
+      "isoelectric_point": 11.44,
+      "molecular_weight": 2313.62,
+      "length": 19
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 206.9,
+      "selectivity_index": 51.7,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 10.53,
+      "hemo_propensity_score": 0.352,
+      "max_hydrophobic_patch_gravy": 1.133
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 63.16,
+      "total_cleavage_sites": 12,
+      "trypsin_sites": 9,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 79.0,
+      "helical_content_pct": 84.2,
+      "beta_sheet_content_pct": 15.8,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.2
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 52.6,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LAKAFVAKLAALGVA",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +1.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic ratio 80.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.102 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 20.0 exceeds threshold 18.0",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.09)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 1.993,
+      "hydrophobic_ratio_pct": 80.0,
+      "boman_index_kcal_mol": -0.067,
+      "hydrophobic_moment": 0.102,
+      "gravy": 1.68,
+      "isoelectric_point": 10.62,
+      "molecular_weight": 1441.91,
+      "length": 15
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 6.67,
+      "hemo_propensity_score": 0.999,
+      "max_hydrophobic_patch_gravy": 1.989
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 20.0,
+      "total_cleavage_sites": 3,
+      "trypsin_sites": 2,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 75.0,
+      "helical_content_pct": 86.7,
+      "beta_sheet_content_pct": 13.3,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.086
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.7,
+      "min_levenshtein_distance": 18,
+      "nearest_homolog_name": "Magainin-2",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases."
+    ]
+  },
+  {
+    "sequence": "KFIIILLWKLAAGWV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +1.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic ratio 80.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.162 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 46.7 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (65.5) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (33.3%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.34)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 1.993,
+      "hydrophobic_ratio_pct": 80.0,
+      "boman_index_kcal_mol": -0.156,
+      "hydrophobic_moment": 0.162,
+      "gravy": 1.7,
+      "isoelectric_point": 10.62,
+      "molecular_weight": 1770.1,
+      "length": 15
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 20.0,
+      "hemo_propensity_score": 1.0,
+      "max_hydrophobic_patch_gravy": 2.544
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 46.67,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 2,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 65.5,
+      "helical_content_pct": 33.3,
+      "beta_sheet_content_pct": 66.7,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.343
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.7,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LKKKLKLLGKKKK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": true,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +7.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic ratio 30.8% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.250 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 69.2 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (8) exceed allowed limit (3)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 7.989,
+      "hydrophobic_ratio_pct": 30.77,
+      "boman_index_kcal_mol": 0.114,
+      "hydrophobic_moment": 0.25,
+      "gravy": -1.262,
+      "isoelectric_point": 11.39,
+      "molecular_weight": 1552.13,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 650.0,
+      "selectivity_index": 162.5,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.011,
+      "max_hydrophobic_patch_gravy": -0.089
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 69.23,
+      "total_cleavage_sites": 9,
+      "trypsin_sites": 8,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 79.0,
+      "helical_content_pct": 84.6,
+      "beta_sheet_content_pct": 7.7,
       "is_amphipathic_helix": true,
-      "segregation_score": 0.536
+      "segregation_score": 0.39
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 61.5,
+      "min_levenshtein_distance": 11,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KVFKLLAKKVWKRVLKGAKI",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": true,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +7.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.335 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 55.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (8) exceed allowed limit (3)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 7.99,
+      "hydrophobic_ratio_pct": 55.0,
+      "boman_index_kcal_mol": 0.091,
+      "hydrophobic_moment": 0.335,
+      "gravy": 0.09,
+      "isoelectric_point": 11.99,
+      "molecular_weight": 2352.57,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 166.7,
+      "selectivity_index": 41.7,
+      "hemolysis_risk": "Moderate",
+      "aromatic_content_pct": 10.0,
+      "hemo_propensity_score": 0.412,
+      "max_hydrophobic_patch_gravy": 0.989
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 55.0,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 8,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 73.6,
+      "helical_content_pct": 60.0,
+      "beta_sheet_content_pct": 40.0,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.442
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 45.0,
+      "min_levenshtein_distance": 16,
+      "nearest_homolog_name": "Magainin-2",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLLKKLKKWKVFL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": false
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic moment 0.281 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 76.9 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.32)",
+      "[Stage 5] Sequence identity (76.9%) with nearest homolog 'LL-37' exceeds novelty cutoff (75.0%)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 53.85,
+      "boman_index_kcal_mol": 0.018,
+      "hydrophobic_moment": 0.281,
+      "gravy": -0.162,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 1671.14,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 271.8,
+      "selectivity_index": 68.0,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 15.38,
+      "hemo_propensity_score": 0.277,
+      "max_hydrophobic_patch_gravy": -0.211
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 76.92,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 77.2,
+      "helical_content_pct": 69.2,
+      "beta_sheet_content_pct": 30.8,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.324
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": false,
+      "max_sequence_identity_pct": 76.9,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "FFFAKKLKLKKKALIFLLGA",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 65.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.072 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 70.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.11)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 65.0,
+      "boman_index_kcal_mol": -0.077,
+      "hydrophobic_moment": 0.072,
+      "gravy": 0.815,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 2323.5,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 20.0,
+      "hemo_propensity_score": 0.984,
+      "max_hydrophobic_patch_gravy": 2.0
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 70.0,
+      "total_cleavage_sites": 14,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 4,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 74.1,
+      "helical_content_pct": 70.0,
+      "beta_sheet_content_pct": 30.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.109
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 35.0,
+      "min_levenshtein_distance": 18,
+      "nearest_homolog_name": "Magainin-2",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLFRVFLKILKKK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": true,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": true,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_2_admet_toxicity",
+    "all_failure_reasons": [
+      "[Stage 2] Predicted HC50 (34.6 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=8.7 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 76.9 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.991,
+      "hydrophobic_ratio_pct": 53.85,
+      "boman_index_kcal_mol": 0.052,
+      "hydrophobic_moment": 0.452,
+      "gravy": 0.131,
+      "isoelectric_point": 11.9,
+      "molecular_weight": 1660.13,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 34.6,
+      "selectivity_index": 8.7,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 15.38,
+      "hemo_propensity_score": 0.899,
+      "max_hydrophobic_patch_gravy": 1.922
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 76.92,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 75.0,
+      "helical_content_pct": 53.8,
+      "beta_sheet_content_pct": 46.2,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.434
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 61.5,
+      "min_levenshtein_distance": 11,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "AKLKGKLKLLLKW",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic moment 0.209 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 61.5 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.26)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.991,
+      "hydrophobic_ratio_pct": 53.85,
+      "boman_index_kcal_mol": -0.003,
+      "hydrophobic_moment": 0.209,
+      "gravy": -0.0,
+      "isoelectric_point": 11.15,
+      "molecular_weight": 1538.05,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 206.9,
+      "selectivity_index": 51.7,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 7.69,
+      "hemo_propensity_score": 0.352,
+      "max_hydrophobic_patch_gravy": 0.767
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 61.54,
+      "total_cleavage_sites": 8,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 77.0,
+      "helical_content_pct": 84.6,
+      "beta_sheet_content_pct": 15.4,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.255
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.2,
+      "min_levenshtein_distance": 20,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLAIFKFKGKKVAKKIAT",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.184 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.25)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.99,
+      "hydrophobic_ratio_pct": 50.0,
+      "boman_index_kcal_mol": 0.037,
+      "hydrophobic_moment": 0.184,
+      "gravy": -0.022,
+      "isoelectric_point": 11.32,
+      "molecular_weight": 2018.32,
+      "length": 18
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 302.3,
+      "selectivity_index": 75.6,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 11.11,
+      "hemo_propensity_score": 0.248,
+      "max_hydrophobic_patch_gravy": 0.4
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 9,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 71.1,
+      "helical_content_pct": 61.1,
+      "beta_sheet_content_pct": 16.7,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.254
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 44.4,
+      "min_levenshtein_distance": 13,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLKIEKKKKKKVALFKLPIG",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +7.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.050 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 55.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (9) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (69.3) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.02)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 7.989,
+      "hydrophobic_ratio_pct": 40.0,
+      "boman_index_kcal_mol": 0.087,
+      "hydrophobic_moment": 0.05,
+      "gravy": -0.57,
+      "isoelectric_point": 11.08,
+      "molecular_weight": 2336.58,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 282.9,
+      "selectivity_index": 70.7,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 5.0,
+      "hemo_propensity_score": 0.266,
+      "max_hydrophobic_patch_gravy": 1.667
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 55.0,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 9,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 69.3,
+      "helical_content_pct": 80.0,
+      "beta_sheet_content_pct": 5.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.018
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 27,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "EEEAEKEIEELSRASKG",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": true,
+      "stage_4_structure": true,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge -4.00 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic ratio 23.5% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.315 below minimum amphipathicity 0.350"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": -4.002,
+      "hydrophobic_ratio_pct": 23.53,
+      "boman_index_kcal_mol": 0.287,
+      "hydrophobic_moment": 0.315,
+      "gravy": -1.582,
+      "isoelectric_point": 4.13,
+      "molecular_weight": 1932.93,
+      "length": 17
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 650.0,
+      "selectivity_index": 162.5,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.005,
+      "max_hydrophobic_patch_gravy": -0.722
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 17.65,
+      "total_cleavage_sites": 3,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Moderate"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 81.0,
+      "helical_content_pct": 70.6,
+      "beta_sheet_content_pct": 0.0,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.559
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 35.3,
+      "min_levenshtein_distance": 21,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'E' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases."
+    ]
+  },
+  {
+    "sequence": "FLKAGALVKKLKFL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 64.3% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.133 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (37.6 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=9.4 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 57.1 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (4) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.17)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 3.992,
+      "hydrophobic_ratio_pct": 64.29,
+      "boman_index_kcal_mol": -0.078,
+      "hydrophobic_moment": 0.133,
+      "gravy": 0.9,
+      "isoelectric_point": 11.03,
+      "molecular_weight": 1575.03,
+      "length": 14
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 37.6,
+      "selectivity_index": 9.4,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 14.29,
+      "hemo_propensity_score": 0.869,
+      "max_hydrophobic_patch_gravy": 1.111
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 57.14,
+      "total_cleavage_sites": 8,
+      "trypsin_sites": 4,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 77.8,
+      "helical_content_pct": 92.9,
+      "beta_sheet_content_pct": 7.1,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.172
     },
     "novelty_metrics": {
       "is_patentable_novel": true,
@@ -973,6 +2285,991 @@
       "min_levenshtein_distance": 19,
       "nearest_homolog_name": "Melittin",
       "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LFKVVLLIRKLI",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 75.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.335 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (63.8) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (8.3%) is below minimum threshold (45.0%)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 75.0,
+      "boman_index_kcal_mol": -0.153,
+      "hydrophobic_moment": 0.335,
+      "gravy": 1.925,
+      "isoelectric_point": 11.69,
+      "molecular_weight": 1454.02,
+      "length": 12
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 8.33,
+      "hemo_propensity_score": 1.0,
+      "max_hydrophobic_patch_gravy": 2.267
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 63.8,
+      "helical_content_pct": 8.3,
+      "beta_sheet_content_pct": 91.7,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.446
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 66.7,
+      "min_levenshtein_distance": 19,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KKLFWLKLLLKK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 58.3% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.167 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (53.7 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=13.4 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 100.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (5) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.16)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 4.991,
+      "hydrophobic_ratio_pct": 58.33,
+      "boman_index_kcal_mol": -0.039,
+      "hydrophobic_moment": 0.167,
+      "gravy": 0.117,
+      "isoelectric_point": 11.15,
+      "molecular_weight": 1557.06,
+      "length": 12
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 53.7,
+      "selectivity_index": 13.4,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 16.67,
+      "hemo_propensity_score": 0.748,
+      "max_hydrophobic_patch_gravy": 1.456
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 100.0,
+      "total_cleavage_sites": 12,
+      "trypsin_sites": 5,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 74.0,
+      "helical_content_pct": 66.7,
+      "beta_sheet_content_pct": 33.3,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.157
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 58.3,
+      "min_levenshtein_distance": 19,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KWKWFKLKLKAKKKKVATGL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +8.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.095 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 65.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (9) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.09)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 8.988,
+      "hydrophobic_ratio_pct": 45.0,
+      "boman_index_kcal_mol": 0.125,
+      "hydrophobic_moment": 0.095,
+      "gravy": -0.8,
+      "isoelectric_point": 11.44,
+      "molecular_weight": 2428.56,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 650.0,
+      "selectivity_index": 162.5,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 15.0,
+      "hemo_propensity_score": 0.053,
+      "max_hydrophobic_patch_gravy": -0.478
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 65.0,
+      "total_cleavage_sites": 13,
+      "trypsin_sites": 9,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 76.3,
+      "helical_content_pct": 80.0,
+      "beta_sheet_content_pct": 10.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.09
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 55.6,
+      "min_levenshtein_distance": 12,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LLKKKKILLFKLIAKLVILT",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 65.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.118 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (69.9) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.16)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 65.0,
+      "boman_index_kcal_mol": -0.18,
+      "hydrophobic_moment": 0.118,
+      "gravy": 1.24,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 2335.65,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 5.0,
+      "hemo_propensity_score": 0.998,
+      "max_hydrophobic_patch_gravy": 2.422
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 10,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 69.9,
+      "helical_content_pct": 50.0,
+      "beta_sheet_content_pct": 50.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.159
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 60.0,
+      "min_levenshtein_distance": 24,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "VAFLKWLLGLLFKKKIGKKA",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 60.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.054 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 70.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (59.9) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (40.0%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.06)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 60.0,
+      "boman_index_kcal_mol": -0.051,
+      "hydrophobic_moment": 0.054,
+      "gravy": 0.59,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 2300.49,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 15.0,
+      "hemo_propensity_score": 0.96,
+      "max_hydrophobic_patch_gravy": 1.844
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 70.0,
+      "total_cleavage_sites": 14,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 3,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 59.9,
+      "helical_content_pct": 40.0,
+      "beta_sheet_content_pct": 45.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.057
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 55.0,
+      "min_levenshtein_distance": 31,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LKLKGKLLGKKLKVRLAALI",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.082 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 40.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.10)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.99,
+      "hydrophobic_ratio_pct": 55.0,
+      "boman_index_kcal_mol": -0.01,
+      "hydrophobic_moment": 0.082,
+      "gravy": 0.51,
+      "isoelectric_point": 11.95,
+      "molecular_weight": 2202.54,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.905,
+      "max_hydrophobic_patch_gravy": 1.7
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 40.0,
+      "total_cleavage_sites": 8,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 71.7,
+      "helical_content_pct": 85.0,
+      "beta_sheet_content_pct": 10.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.097
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LFAKGRGLLLKIV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 61.5% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.213 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 53.9 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (61.9) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (30.8%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.35)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 61.54,
+      "boman_index_kcal_mol": -0.063,
+      "hydrophobic_moment": 0.213,
+      "gravy": 1.185,
+      "isoelectric_point": 11.69,
+      "molecular_weight": 1426.94,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 7.69,
+      "hemo_propensity_score": 0.946,
+      "max_hydrophobic_patch_gravy": 1.211
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 53.85,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 61.9,
+      "helical_content_pct": 30.8,
+      "beta_sheet_content_pct": 46.2,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.349
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.2,
+      "min_levenshtein_distance": 18,
+      "nearest_homolog_name": "Magainin-2",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LLKFKKKKLWKVALGKK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +7.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.088 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 70.6 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (8) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (69.4) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.08)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 7.989,
+      "hydrophobic_ratio_pct": 47.06,
+      "boman_index_kcal_mol": 0.074,
+      "hydrophobic_moment": 0.088,
+      "gravy": -0.5,
+      "isoelectric_point": 11.39,
+      "molecular_weight": 2055.39,
+      "length": 17
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 528.8,
+      "selectivity_index": 132.2,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 11.76,
+      "hemo_propensity_score": 0.097,
+      "max_hydrophobic_patch_gravy": 0.067
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 70.59,
+      "total_cleavage_sites": 12,
+      "trypsin_sites": 8,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 69.4,
+      "helical_content_pct": 64.7,
+      "beta_sheet_content_pct": 23.5,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.084
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 52.9,
+      "min_levenshtein_distance": 27,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "FKLLLAKKKKKLLKLG",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Net charge +6.99 at pH 7.4 outside target [+2.0, +6.5]",
+      "[Stage 1] Hydrophobic moment 0.179 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 68.8 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (7) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.20)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 6.99,
+      "hydrophobic_ratio_pct": 50.0,
+      "boman_index_kcal_mol": -0.018,
+      "hydrophobic_moment": 0.179,
+      "gravy": -0.019,
+      "isoelectric_point": 11.32,
+      "molecular_weight": 1868.31,
+      "length": 16
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 301.2,
+      "selectivity_index": 75.3,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 6.25,
+      "hemo_propensity_score": 0.249,
+      "max_hydrophobic_patch_gravy": 0.044
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 68.75,
+      "total_cleavage_sites": 11,
+      "trypsin_sites": 7,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 75.2,
+      "helical_content_pct": 68.8,
+      "beta_sheet_content_pct": 18.8,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.2
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 43.8,
+      "min_levenshtein_distance": 11,
+      "nearest_homolog_name": "Syn-P18",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'F' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "ILAIVLGKKWWAIGVKAAPV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 70.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.098 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 30.0 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (56.5) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (20.0%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.17)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 70.0,
+      "boman_index_kcal_mol": -0.048,
+      "hydrophobic_moment": 0.098,
+      "gravy": 1.25,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 2132.33,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 10.0,
+      "hemo_propensity_score": 0.991,
+      "max_hydrophobic_patch_gravy": 1.6
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 30.0,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 2,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 56.5,
+      "helical_content_pct": 20.0,
+      "beta_sheet_content_pct": 55.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.17
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 46.2,
+      "min_levenshtein_distance": 16,
+      "nearest_homolog_name": "Indolicidin",
+      "nearest_homolog_organism": "Staphylococcus aureus"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KKKGLFFFWPAKFIKLVK",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 55.6% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.145 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (88.8 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 3] Cleavage Site Index 77.8 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Predicted pLDDT (57.0) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Helical content (33.3%) is below minimum threshold (45.0%)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.18)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 55.56,
+      "boman_index_kcal_mol": 0.018,
+      "hydrophobic_moment": 0.145,
+      "gravy": 0.167,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 2224.37,
+      "length": 18
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 88.8,
+      "selectivity_index": 22.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 27.78,
+      "hemo_propensity_score": 0.593,
+      "max_hydrophobic_patch_gravy": 1.233
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 77.78,
+      "total_cleavage_sites": 14,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 4,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 57.0,
+      "helical_content_pct": 33.3,
+      "beta_sheet_content_pct": 50.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.177
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 50.0,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "LLKKAIGLLLKWV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": true,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 69.2% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.337 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 53.9 exceeds threshold 18.0"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 69.23,
+      "boman_index_kcal_mol": -0.144,
+      "hydrophobic_moment": 0.337,
+      "gravy": 1.269,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 1494.01,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 7.69,
+      "hemo_propensity_score": 0.996,
+      "max_hydrophobic_patch_gravy": 1.856
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 53.85,
+      "total_cleavage_sites": 7,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 72.1,
+      "helical_content_pct": 46.2,
+      "beta_sheet_content_pct": 53.8,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.57
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 69.2,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Protects destabilizing 'L' from aminopeptidases.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "GLKAKLKIKKKI",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": true,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic moment 0.242 below minimum amphipathicity 0.350",
+      "[Stage 3] Cleavage Site Index 50.0 exceeds threshold 18.0",
+      "[Stage 3] Trypsin cleavage sites (6) exceed allowed limit (3)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.28)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 5.99,
+      "hydrophobic_ratio_pct": 41.67,
+      "boman_index_kcal_mol": 0.048,
+      "hydrophobic_moment": 0.242,
+      "gravy": -0.45,
+      "isoelectric_point": 11.24,
+      "molecular_weight": 1366.98,
+      "length": 12
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 553.0,
+      "selectivity_index": 138.2,
+      "hemolysis_risk": "Low",
+      "aromatic_content_pct": 0.0,
+      "hemo_propensity_score": 0.085,
+      "max_hydrophobic_patch_gravy": -0.233
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 50.0,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 6,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 82.0,
+      "helical_content_pct": 91.7,
+      "beta_sheet_content_pct": 0.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.275
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 66.7,
+      "min_levenshtein_distance": 29,
+      "nearest_homolog_name": "LL-37",
+      "nearest_homolog_organism": "Pseudomonas aeruginosa"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "VKVFPIAAKKLLV",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 69.2% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.224 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 30.8 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (67.5) is below structural confidence cutoff (70.0)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 69.23,
+      "boman_index_kcal_mol": -0.069,
+      "hydrophobic_moment": 0.224,
+      "gravy": 1.369,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 1424.95,
+      "length": 13
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 7.69,
+      "hemo_propensity_score": 0.969,
+      "max_hydrophobic_patch_gravy": 1.167
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 30.77,
+      "total_cleavage_sites": 4,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 0,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 67.5,
+      "helical_content_pct": 46.2,
+      "beta_sheet_content_pct": 53.8,
+      "is_amphipathic_helix": true,
+      "segregation_score": 0.462
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 53.8,
+      "min_levenshtein_distance": 19,
+      "nearest_homolog_name": "Melittin",
+      "nearest_homolog_organism": "Broad Spectrum"
+    },
+    "synthesis_recommendations": [
+      "N-terminal Acetylation (Ac-): Recommended for general exopeptidase blockade.",
+      "C-terminal Amidation (-NH2): Recommended to eliminate C-terminal negative charge and block carboxypeptidases.",
+      "Head-to-tail cyclization or D-amino acid substitution recommended to disrupt endopeptidase recognition."
+    ]
+  },
+  {
+    "sequence": "KLPVAAKALAKAVALFLIVL",
+    "target_organism": "Acinetobacter baumannii",
+    "overall_passed": false,
+    "stages_passed": {
+      "stage_1_bro5": false,
+      "stage_2_admet_toxicity": false,
+      "stage_3_admet_metabolism": false,
+      "stage_4_structure": false,
+      "stage_5_novelty": true
+    },
+    "rejection_stage": "stage_1_bro5",
+    "all_failure_reasons": [
+      "[Stage 1] Hydrophobic ratio 80.0% outside window [35.0%, 55.0%]",
+      "[Stage 1] Hydrophobic moment 0.172 below minimum amphipathicity 0.350",
+      "[Stage 2] Predicted HC50 (25.0 ug/mL) is below safe cutoff (150.0 ug/mL)",
+      "[Stage 2] Selectivity Index SI=6.2 (HC50/MIC) below target 20.0",
+      "[Stage 3] Cleavage Site Index 30.0 exceeds threshold 18.0",
+      "[Stage 4] Predicted pLDDT (69.1) is below structural confidence cutoff (70.0)",
+      "[Stage 4] Lacks clear amphipathic facial segregation on helical axis (score: 0.34)"
+    ],
+    "bro5_metrics": {
+      "net_charge_ph74": 2.993,
+      "hydrophobic_ratio_pct": 80.0,
+      "boman_index_kcal_mol": -0.106,
+      "hydrophobic_moment": 0.172,
+      "gravy": 1.82,
+      "isoelectric_point": 10.87,
+      "molecular_weight": 2048.35,
+      "length": 20
+    },
+    "admet_toxicity_metrics": {
+      "predicted_hc50_ug_ml": 25.0,
+      "selectivity_index": 6.2,
+      "hemolysis_risk": "High (Toxic)",
+      "aromatic_content_pct": 5.0,
+      "hemo_propensity_score": 1.0,
+      "max_hydrophobic_patch_gravy": 3.411
+    },
+    "admet_metabolism_metrics": {
+      "cleavage_site_index": 30.0,
+      "total_cleavage_sites": 6,
+      "trypsin_sites": 3,
+      "chymotrypsin_sites": 1,
+      "estimated_stability": "Low (Rapid Clearance)"
+    },
+    "structure_metrics": {
+      "predicted_plddt": 69.1,
+      "helical_content_pct": 60.0,
+      "beta_sheet_content_pct": 35.0,
+      "is_amphipathic_helix": false,
+      "segregation_score": 0.339
+    },
+    "novelty_metrics": {
+      "is_patentable_novel": true,
+      "max_sequence_identity_pct": 45.0,
+      "min_levenshtein_distance": 28,
+      "nearest_homolog_name": "Cecropin A",
+      "nearest_homolog_organism": "Acinetobacter baumannii"
     },
     "synthesis_recommendations": [
       "N-terminal Acetylation (Ac-): Protects destabilizing 'K' from aminopeptidases.",

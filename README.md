@@ -12,6 +12,31 @@ The platform couples a **target-conditioned autoregressive causal transformer de
 
 ---
 
+## ⚡ 60-Second Quickstart (Try It Immediately)
+
+Get up and running with zero configuration:
+
+```bash
+# 1. Clone & install
+git clone https://github.com/Raunak-Prakash20/PepForge.git
+cd PepForge
+pip install -e .
+
+# 2. Run the interactive 60-second guided tour
+python demo.py
+
+# 3. Screen any custom peptide sequence
+python scripts/run_screening.py --sequence "KIKLLKLLKKAKKLL"
+
+# 4. Generate 20 brand-new peptides for P. aeruginosa
+python scripts/run_generate.py --target "Pseudomonas aeruginosa" --num_candidates 20
+
+# 5. Run the verified test suite (21/21 passed)
+pytest tests/ -v
+```
+
+---
+
 ## 🔬 Core Screening Funnel Architecture
 
 Natural and synthetic therapeutic peptides inherently operate **Beyond Rule of Five (bRo5)** space. PepForge replaces small-molecule filters with biophysically calibrated peptide metrics:
@@ -95,40 +120,78 @@ PepForge implements a lightweight, high-speed **Causal Transformer Decoder** tai
 
 ---
 
-## 📦 Installation & Setup
+## 🚀 CLI Usage Guide
 
+### 1. Run Interactive 60-Second Demo
 ```bash
-# Clone the repository
-git clone https://github.com/Raunak-Prakash20/pepforge.git
-cd pepforge
-
-# Install dependencies in an editable environment
-pip install -e .
+python demo.py
 ```
 
----
+### 2. Screen Any Custom Peptide Sequence
+```bash
+python scripts/run_screening.py --sequence "KIKLLKLLKKAKKLL" --target "Pseudomonas aeruginosa"
+```
 
-## 🚀 CLI Usage
+### 3. Generate De Novo Candidates for a Specific Target
+```bash
+python scripts/run_generate.py --target "Pseudomonas aeruginosa" --charge 3.5 --length 18 --num_candidates 20
+```
 
-### 1. Ingest, Clean, and Cluster Datasets
+### 4. Evaluate Benchmark Reference Library
+```bash
+python scripts/run_screening.py
+```
+
+### 5. Ingest, Clean, and Cluster New AMP Datasets
 ```bash
 python scripts/run_ingest.py --identity 0.80 --split-ratio 0.8 0.1 0.1
 ```
 
-### 2. Train Conditioned Transformer
+### 6. Train or Fine-Tune Transformer
 ```bash
 python scripts/run_train.py --epochs 15 --batch-size 32 --lr 5e-4
 ```
 
-### 3. Generate De Novo Candidates
-```bash
-python scripts/run_generate.py --target "Pseudomonas aeruginosa" --n_samples 20 --output results/candidates.json
+---
+
+## 💻 Python API Usage
+
+You can import PepForge directly into your own computational biology workflows:
+
+```python
+from pepforge.pipeline.screening_funnel import ScreeningFunnel
+
+# Initialize the 5-stage funnel
+funnel = ScreeningFunnel()
+
+# Screen any candidate sequence
+report = funnel.evaluate_candidate(
+    sequence="KWKLFKKIPKFLHLAKKF",
+    target_organism="Acinetobacter baumannii",
+)
+
+print(f"Overall Passed: {report.overall_passed}")
+print(f"Net Charge (pH 7.4): {report.bro5_metrics['net_charge_ph74']:+.2f}")
+print(f"Predicted HC50 (ug/mL): {report.admet_toxicity_metrics['predicted_hc50_ug_ml']:.1f}")
+print(f"Cleavage Sites: {report.admet_metabolism_metrics['total_cleavage_sites']}")
+print(f"Synthesis Capping Advice: {report.synthesis_recommendations}")
 ```
 
-### 4. Execute 5-Stage In Silico Screening
-```bash
-python scripts/run_screening.py --input results/candidates.json --output results/leads_dossier.json
-```
+---
+
+## 📂 Repository Map
+
+| Directory / File | Description |
+|:---|:---|
+| [`demo.py`](demo.py) | **Zero-friction 60-second guided tour** (benchmark triage + live AI generation) |
+| [`pepforge/filters/`](pepforge/filters/) | Biophysical gatekeepers (bRo5 rules, hemolysis ADMET, protease stability, 3D folding, FTO) |
+| [`pepforge/models/`](pepforge/models/) | Causal transformer decoder, tokenizer with conditioning prefixes, trainer |
+| [`pepforge/pipeline/`](pepforge/pipeline/) | Unified `ScreeningFunnel` orchestrator with Pydantic validation |
+| [`scripts/`](scripts/) | Ready-to-run terminal entrypoints for generation, screening, training, and ingestion |
+| [`models/`](models/) | Serialized model weights checkpoint (`pepforge_model.pt`) |
+| [`data/processed/`](data/processed/) | Clustered AMP corpus (80% CD-HIT identity) with zero homology leakage |
+| [`results/`](results/) | Benchmark screening evaluation reports and lead candidate dossiers |
+| [`tests/`](tests/) | Comprehensive 21-test verification suite (`pytest tests/ -v`) |
 
 ---
 

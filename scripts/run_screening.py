@@ -12,6 +12,7 @@ from pathlib import Path
 from rich.console import Console
 from rich.table import Table
 
+import argparse
 from pepforge.data.benchmarks import BENCHMARK_PEPTIDES
 from pepforge.pipeline.screening_funnel import ScreeningFunnel
 
@@ -19,6 +20,11 @@ console = Console()
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Run 5-Stage Screening Funnel on benchmarks or custom peptide")
+    parser.add_argument("--sequence", type=str, default=None, help="Custom amino acid sequence to screen")
+    parser.add_argument("--target", type=str, default="Pseudomonas aeruginosa", help="Target pathogen")
+    args = parser.parse_args()
+
     console.print(
         "\n[bold cyan]===========================================================[/bold cyan]"
     )
@@ -30,6 +36,45 @@ def main() -> None:
     )
 
     funnel = ScreeningFunnel()
+
+    if args.sequence:
+        console.print(f"[bold yellow]-> Evaluating Custom Sequence:[/bold yellow] [bold green]{args.sequence}[/bold green]")
+        console.print(f"[bold yellow]-> Target Pathogen:[/bold yellow] {args.target}\n")
+        report = funnel.evaluate_candidate(args.sequence, target_organism=args.target)
+        
+        status_str = "[bold green]PASSED ALL 5 STAGES[/bold green]" if report.overall_passed else f"[bold red]FAILED ({report.rejection_stage})[/bold red]"
+        console.print(f"[bold]Overall Status:[/bold] {status_str}")
+        if report.all_failure_reasons:
+            console.print("\n[bold red]Triage Failures:[/bold red]")
+            for r in report.all_failure_reasons:
+                console.print(f"  [-] {r}")
+        
+        console.print("\n[bold cyan]Biophysical Properties (Stage 1 bRo5):[/bold cyan]")
+        console.print(f"  * Net Charge (pH 7.4): {report.bro5_metrics['net_charge_ph74']:+.2f}")
+        console.print(f"  * Hydrophobic Ratio: {report.bro5_metrics['hydrophobic_ratio_pct']:.1f}%")
+        console.print(f"  * Hydrophobic Moment (uH): {report.bro5_metrics['hydrophobic_moment']:.3f}")
+        console.print(f"  * GRAVY Hydropathy: {report.bro5_metrics['gravy']:.2f}")
+        console.print(f"  * Boman Receptor Index: {report.bro5_metrics['boman_index_kcal_mol']:.2f} kcal/mol")
+
+        console.print("\n[bold cyan]ADMET Toxicity & Hemolysis (Stage 2):[/bold cyan]")
+        console.print(f"  * Predicted HC50: {report.admet_toxicity_metrics['predicted_hc50_ug_ml']:.1f} ug/mL")
+        console.print(f"  * Selectivity Index (SI): {report.admet_toxicity_metrics['selectivity_index']:.1f}")
+        console.print(f"  * Hemolysis Risk Level: {report.admet_toxicity_metrics['hemolysis_risk']}")
+
+        console.print("\n[bold cyan]Metabolic Stability & Cleavages (Stage 3):[/bold cyan]")
+        console.print(f"  * Cleavage Sites: {report.admet_metabolism_metrics['total_cleavage_sites']} (Trypsin: {report.admet_metabolism_metrics['trypsin_sites']}, Chymotrypsin: {report.admet_metabolism_metrics['chymotrypsin_sites']})")
+        console.print(f"  * Cleavage Site Index (CSI): {report.admet_metabolism_metrics['cleavage_site_index']:.1f}")
+
+        console.print("\n[bold cyan]3D Structure & Novelty (Stages 4 & 5):[/bold cyan]")
+        console.print(f"  * Predicted pLDDT: {report.structure_metrics['predicted_plddt']:.1f}")
+        console.print(f"  * Helical Content: {report.structure_metrics['helical_content_pct']:.1f}%")
+        console.print(f"  * Max Homology Identity: {report.novelty_metrics['max_sequence_identity_pct']:.1f}% vs {report.novelty_metrics['nearest_homolog_name']}")
+
+        if report.synthesis_recommendations:
+            console.print("\n[bold yellow]Synthesis Capping Advice:[/bold yellow]")
+            for rec in report.synthesis_recommendations:
+                console.print(f"  * {rec}")
+        return
 
     table = Table(
         title="5-Stage Screening Funnel Evaluation Results",
