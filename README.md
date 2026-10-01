@@ -3,8 +3,9 @@
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![PyTorch 2.14](https://img.shields.io/badge/PyTorch-2.14-EE4C2C.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI / Build & Test](https://github.com/Raunak-Prakash20/PepForge/actions/workflows/ci.yml/badge.svg)](https://github.com/Raunak-Prakash20/PepForge/actions/workflows/ci.yml)
 [![Tests Passing](https://img.shields.io/badge/Tests-21%2F21%20Passed-brightgreen.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 PepForge-AI is an end-to-end computational therapeutics platform for designing potent, non-hemolytic antimicrobial peptides (AMPs) targeting critical multidrug-resistant ESKAPE pathogens (*Pseudomonas aeruginosa*, *Acinetobacter baumannii*, and Methicillin-resistant *Staphylococcus aureus* [MRSA]).
 
